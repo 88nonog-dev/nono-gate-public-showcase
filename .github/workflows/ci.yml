@@ -16,3 +16,5 @@ jobs:
         with:
           node-version: '18'
       - run: echo "CI is running"
+
+      - run: exit 1
