@@ -1,4 +1,4 @@
-# NONO-GATE — Deterministic Governance Gate
+# NONO-GATE â€” Deterministic Governance Gate
 
 [Ledger: Append-Only]  
 [Deterministic Hashing]  
@@ -18,7 +18,7 @@ It ensures:
 - Unexpected file injection detection
 - Tamper-evident governance trail
 
-This is enforcement — not passive validation.
+This is enforcement â€” not passive validation.
 
 ---
 
@@ -103,17 +103,17 @@ This demonstrates deterministic reproducibility.
 
 ## Enterprise Adoption Path
 
-### Step 1 � Add to CI
+### Step 1 — Add to CI
 
 Install NONO-GATE in your pipeline container:
 
 npm install nono-gate --omit=dev
 
-### Step 2 � Define Governance Policy
+### Step 2 — Define Governance Policy
 
 Create policy.json defining allowed staging structure.
 
-### Step 3 � Enforce in CI
+### Step 3 — Enforce in CI
 
 Run:
 
@@ -125,7 +125,7 @@ Pipeline fails automatically if:
 - Staging structure changes
 - Governance boundary is violated
 
-### Step 4 � Archive Evidence
+### Step 4 — Archive Evidence
 
 Store:
 - BUNDLE_ROOT_SHA256
