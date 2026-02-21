@@ -20,3 +20,5 @@ npm run govern:fail
 \\\`nSTAGING_UNEXPECTED_FILE:INJECTED_UNEXPECTED_FILE.txt
 \\\`nThis demonstrates strict governance enforcement, not passive validation.
 
+
+CI check name probe: 2026-02-21 10:39:35
