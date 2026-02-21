@@ -1,0 +1,46 @@
+﻿name: NONO-GATE Demo
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+jobs:
+  governance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm install
+
+      - name: Copy NONO-GATE Engine
+        run: cp -r ../NONO_GATE_SOURCE_ONLY_V2_20260221_043907 ./engine
+
+      - name: Install Engine
+        run: cd engine && npm ci
+
+      - name: Run NONO-GATE Enterprise
+        run: node engine/bin/nono.js enterprise --staging staging --policy policy.json --run-id CI_DEMO
+
+      - name: Upload Evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: nono-gate-evidence
+          path: engine/.nono/evidence/CI_DEMO
+
+  fail_scenario:
+    runs-on: ubuntu-latest
+    needs: governance
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: cp -r ../NONO_GATE_SOURCE_ONLY_V2_20260221_043907 ./engine
+      - run: cd engine && npm ci
+      - name: Run NONO-GATE FAIL Scenario
+        run: node engine/bin/nono.js enterprise --staging staging_fail --policy policy.json --run-id CI_FAIL
+

@@ -1,0 +1,15 @@
+﻿{
+    "name":  "nono-gate-demo",
+    "version":  "1.0.0",
+    "private":  true,
+    "scripts":  {
+                    "govern:fail":  "npx nono enterprise --staging \"C:\\Users\\hp\\Desktop\\nono-grop\\150\\NONO_GATE_SOURCE_ONLY_V2_20260221_043907\\NONO_GATE_PUBLIC_DEMO\\examples\\staging_bad\" --policy \"C:\\Users\\hp\\Desktop\\nono-grop\\150\\NONO_GATE_SOURCE_ONLY_V2_20260221_043907\\NONO_GATE_PUBLIC_DEMO\\examples\\policy.json\" --run-id DEMO_FAIL",
+                    "govern":  "npx nono enterprise --staging \"C:\\Users\\hp\\Desktop\\nono-grop\\150\\NONO_GATE_SOURCE_ONLY_V2_20260221_043907\\NONO_GATE_PUBLIC_DEMO\\examples\\staging_good\" --policy \"C:\\Users\\hp\\Desktop\\nono-grop\\150\\NONO_GATE_SOURCE_ONLY_V2_20260221_043907\\NONO_GATE_PUBLIC_DEMO\\examples\\policy.json\" --run-id DEMO_RUN",
+                    "govern:pass":  "npx nono enterprise --staging \"C:\\Users\\hp\\Desktop\\nono-grop\\150\\NONO_GATE_SOURCE_ONLY_V2_20260221_043907\\NONO_GATE_PUBLIC_DEMO\\examples\\staging_good\" --policy \"C:\\Users\\hp\\Desktop\\nono-grop\\150\\NONO_GATE_SOURCE_ONLY_V2_20260221_043907\\NONO_GATE_PUBLIC_DEMO\\examples\\policy.json\" --run-id DEMO_PASS",
+                    "start":  "node src/index.js"
+                },
+    "dependencies":  {
+                         "express":  "^4.18.2",
+                         "nono-gate-v1__20260215_202937":  "file:engine"
+                     }
+}
