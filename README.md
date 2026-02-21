@@ -181,3 +181,5 @@ It ensures:
 This places NONO-GATE between detection and release integrity,
 as a deterministic governance enforcement layer.
 
+
+<!-- Signed commit trigger -->
